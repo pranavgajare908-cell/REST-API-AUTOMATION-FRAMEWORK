@@ -1,0 +1,112 @@
+{
+  "login": {
+    "valid": {
+      "email": "qa@demo.io",
+      "password": "Password123"
+    },
+    "invalid_email": {
+      "email": "invalid@example.com",
+      "password": "Password123"
+    },
+    "invalid_password": {
+      "email": "qa@demo.io",
+      "password": "WrongPassword123"
+    },
+    "invalid_credentials": {
+      "email": "invalid@example.com",
+      "password": "WrongPassword123"
+    },
+    "missing_email": {
+      "password": "Password123"
+    },
+    "missing_password": {
+      "email": "qa@demo.io"
+    },
+    "empty_payload": {}
+  },
+  "create_user": {
+    "firstName": "Yugant",
+    "lastName": "Gajare",
+    "email": "yugant@example.com",
+    "role": "QA Engineer"
+  },
+  "update_user": {
+    "firstName": "Yugant Updated",
+    "lastName": "Gajare Updated",
+    "email": "yugant.updated@example.com",
+    "role": "Senior QA Engineer"
+  },
+  "patch_user": {
+    "firstName": "Yugant PATCH Updated"
+  },
+  "invalid_users": {
+    "missing_firstName": {
+      "lastName": "Gajare",
+      "email": "yugant.invalid@example.com",
+      "role": "QA Engineer"
+    },
+    "missing_lastName": {
+      "firstName": "Yugant",
+      "email": "yugant.invalid@example.com",
+      "role": "QA Engineer"
+    },
+    "missing_email": {
+      "firstName": "Yugant",
+      "lastName": "Gajare",
+      "role": "QA Engineer"
+    },
+    "invalid_email": {
+      "firstName": "Yugant",
+      "lastName": "Gajare",
+      "email": "invalid-email",
+      "role": "QA Engineer"
+    },
+    "empty_payload": {},
+    "empty_firstName": {
+      "firstName": "",
+      "lastName": "Gajare",
+      "email": "yugant.empty@example.com",
+      "role": "QA Engineer"
+    },
+    "empty_email": {
+      "firstName": "Yugant",
+      "lastName": "Gajare",
+      "email": "",
+      "role": "QA Engineer"
+    },
+    "null_values": {
+      "firstName": null,
+      "lastName": null,
+      "email": null,
+      "role": null
+    },
+    "invalid_role": {
+      "firstName": "Yugant",
+      "lastName": "Gajare",
+      "email": "yugant.role@example.com",
+      "role": "InvalidRole"
+    },
+    "extra_fields": {
+      "firstName": "Yugant",
+      "lastName": "Gajare",
+      "email": "yugant.extra@example.com",
+      "role": "QA Engineer",
+      "unknownField": "unexpected value"
+    }
+  },
+  "invalid_patch_users": {
+    "invalid_email": {
+      "email": "invalid-email"
+    },
+    "empty_firstName": {
+      "firstName": ""
+    },
+    "null_firstName": {
+      "firstName": null
+    },
+    "invalid_role": {
+      "role": "InvalidRole"
+    },
+    "empty_payload": {}
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User by ID API Response",
+  "type": "object",
+  "required": [
+    "data",
+    "meta"
+  ],
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": [
+        "id",
+        "firstName",
+        "lastName",
+        "username",
+        "email",
+        "role",
+        "status",
+        "avatar",
+        "createdAt"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "role": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string",
+          "format": "uri"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "required": [
+        "requestId",
+        "responseTimeMs",
+        "timestamp",
+        "apiVersion"
+      ],
+      "properties": {
+        "requestId": {
+          "type": "string"
+        },
+        "responseTimeMs": {
+          "type": "number"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "apiVersion": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
