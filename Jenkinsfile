@@ -48,6 +48,11 @@ pipeline {
                 artifacts: 'logs/**/*.log',
                 allowEmptyArchive: true
             )
+            
+            archiveArtifacts(
+               artifacts: 'REST-API-AUTOMATION-FRAMEWORK.zip',
+               allowEmptyArchive: false
+            )
         }
     }
 }
