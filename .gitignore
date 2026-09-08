@@ -1,33 +1,25 @@
-venv/
-.venv/
-__pycache__/
-*.pyc
-.pytest_cache/
-.idea/
-.vscode/
-.env
-logs/*
-reports/*
-allure-results/
-allure-report/
-
-
-
-
+# Python
 __pycache__/
 *.pyc
 
+# Virtual environments
 .venv/
 venv/
 env/
 
+# Environment variables
 .env
 
-allure-results/
-allure-report/
+# Pytest
+.pytest_cache/
+test-results.xml
 
-logs/
-reports/
-
+# IDE
 .idea/
 .vscode/
+
+# Test reports
+allure-results/
+allure-report/
+logs/
+reports/

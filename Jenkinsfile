@@ -21,6 +21,11 @@ pipeline {
                 bat 'pytest -v --junitxml=test-results.xml'
             }
         }
+        stage('Package Framework') {
+            steps {
+                bat 'powershell -Command "Compress-Archive -Path * -DestinationPath REST-API-AUTOMATION-FRAMEWORK.zip -Force"'
+            }
+        }
     }
 
     post {
