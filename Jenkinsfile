@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Package Framework') {
             steps {
-                bat 'powershell -Command "Compress-Archive -Path * -DestinationPath REST-API-AUTOMATION-FRAMEWORK.zip -Force"'
+                bat 'powershell -Command "Compress-Archive -Path api,config,data,schemas,testdata,tests,utils,conftest.py,Dockerfile,Jenkinsfile,pytest.ini,README.md,requirements.txt,.gitignore -DestinationPath REST-API-AUTOMATION-FRAMEWORK.zip -Force"'
             }
         }
     }
