@@ -11,19 +11,20 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'python -m pip install --upgrade pip'
+                bat 'python --version'
                 bat 'python -m pip install -r requirements.txt'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'pytest -v'
+                bat 'pytest -v --junitxml=test-results.xml'
             }
         }
     }
 
     post {
+
         always {
             allure([
                 includeProperties: false,
@@ -32,6 +33,16 @@ pipeline {
                     [path: 'allure-results']
                 ]
             ])
+
+            junit(
+                testResults: 'test-results.xml',
+                allowEmptyResults: true
+            )
+
+            archiveArtifacts(
+                artifacts: 'logs/**/*.log',
+                allowEmptyArchive: true
+            )
         }
     }
 }
